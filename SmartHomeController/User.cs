@@ -42,6 +42,22 @@ namespace SmartHomeController
             set { isLoggedin = value; }
         }
 
+        //constructor
+        public User(int userID,
+                    string userName,
+                    string contactInfo,
+                    string password,
+                    bool isLoggedin);
+
+        {   UserID = userID;   
+            UserName = userName;
+            ContactInfo = contactInfo;
+            Password = password;
+            IsLoggedin = isLoggedin;
+        }
+        
+           
+        
         //methods for classes
         public bool Login(string userName, string password)
         {
@@ -57,6 +73,18 @@ namespace SmartHomeController
             }
             return isLoggedin;
         }
-
+        public bool Logout()
+        {
+            if (isLoggedin)
+            {
+                isLoggedin = false;
+                Console.WriteLine("Logout successful.");
+            }
+            else
+            {
+                Console.WriteLine("User is not logged in.");
+            }
+            return isLoggedin;
+        }
     }
 }
