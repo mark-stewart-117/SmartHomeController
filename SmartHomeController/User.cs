@@ -47,9 +47,10 @@ namespace SmartHomeController
                     string userName,
                     string contactInfo,
                     string password,
-                    bool isLoggedin);
+                    bool isLoggedin)
 
-        {   UserID = userID;   
+        {   
+            UserID = userID;   
             UserName = userName;
             ContactInfo = contactInfo;
             Password = password;
